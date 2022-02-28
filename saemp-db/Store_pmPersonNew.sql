@@ -96,7 +96,6 @@ BEGIN
 		idProvince,
 		idDepartment,
 		name,
-		code,
 		ubigeo,
 		isDefault
 	FROM dbo.pmDistrict

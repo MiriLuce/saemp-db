@@ -1,4 +1,4 @@
---CREATE DATABASE [DBSaemp]
+-- CREATE DATABASE [DBSaemp]
 
 CREATE LOGIN Consultant WITH PASSWORD = '123';
 CREATE USER Consultant FOR LOGIN Consultant;
@@ -41,7 +41,7 @@ GO
 
 CREATE TABLE [dbo].[pmDepartment]
 (
-	[idDepartment] [int] NOT NULL IDENTITY(1,1),
+	[idDepartment] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[code] [char](2) NOT NULL,
 	[isDefault] [bit] NOT NULL DEFAULT 0,
@@ -58,14 +58,14 @@ GO
 
 CREATE TABLE [dbo].[pmProvince]
 (
-	[idProvince] [int] NOT NULL IDENTITY(1,1),
 	[idDepartment] [int] NOT NULL,
+	[idProvince] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
-	[code] [char](2) NOT NULL,
+	[code] [char](4) NOT NULL,
 	[isDefault] [bit] NOT NULL DEFAULT 0,
  CONSTRAINT [PK_Province] PRIMARY KEY CLUSTERED 
 (
-	[idProvince] ASC
+	[idDepartment] ASC, [idProvince] ASC 
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -81,32 +81,24 @@ GO
 
 CREATE TABLE [dbo].[pmDistrict]
 (
-	[idDistrict] [int] NOT NULL IDENTITY(1,1),
 	[idDepartment] [int] NOT NULL,
 	[idProvince] [int] NOT NULL,
+	[idDistrict] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
-	[code] [char](2) NOT NULL,
 	[ubigeo] [char](6) NOT NULL UNIQUE,
 	[isDefault] [bit] NOT NULL DEFAULT 0,
  CONSTRAINT [PK_District] PRIMARY KEY CLUSTERED 
 (
-	[idDistrict] ASC
+	[idDepartment] ASC, [idProvince] ASC, [idDistrict] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[pmDistrict]  WITH CHECK ADD  CONSTRAINT [FK_District_Department] FOREIGN KEY([idDepartment])
-REFERENCES [dbo].[pmDepartment] ([idDepartment])
+ALTER TABLE [dbo].[pmDistrict]  WITH CHECK ADD  CONSTRAINT [FK_District_Department_Province] FOREIGN KEY([idDepartment], [idProvince])
+REFERENCES [dbo].[pmProvince] ([idDepartment], [idProvince])
 GO
 
-ALTER TABLE [dbo].[pmDistrict] CHECK CONSTRAINT [FK_District_Department]
-GO
-
-ALTER TABLE [dbo].[pmDistrict]  WITH CHECK ADD  CONSTRAINT [FK_District_Province] FOREIGN KEY([idProvince])
-REFERENCES [dbo].[pmProvince] ([idProvince])
-GO
-
-ALTER TABLE [dbo].[pmDistrict] CHECK CONSTRAINT [FK_District_Province]
+ALTER TABLE [dbo].[pmDistrict] CHECK CONSTRAINT [FK_District_Department_Province]
 GO
 
 
@@ -167,6 +159,7 @@ CREATE TABLE [dbo].[pmPerson](
 	[birthdate] [date] NULL,
 	[idBirthCountry] [int] NOT NULL,
 	[idResidentDepartment] [int] NULL,
+	[idResidentProvince] [int] NULL,
 	[idResidentDistrict] [int] NULL,
 	[address] [nvarchar](200) NULL,
 	[addressReference] [nvarchar](200) NULL,
@@ -192,18 +185,11 @@ GO
 ALTER TABLE [dbo].[pmPerson] CHECK CONSTRAINT [FK_Person_Country]
 GO
 
-ALTER TABLE [dbo].[pmPerson]  WITH CHECK ADD  CONSTRAINT [FK_Person_Department] FOREIGN KEY([idResidentDepartment])
-REFERENCES [dbo].[pmDepartment] ([idDepartment])
+ALTER TABLE [dbo].[pmPerson]  WITH CHECK ADD  CONSTRAINT [FK_Person_Department_Province_District] FOREIGN KEY([idResidentDepartment],[idResidentProvince],[idResidentDistrict])
+REFERENCES [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict])
 GO
 
-ALTER TABLE [dbo].[pmPerson] CHECK CONSTRAINT [FK_Person_Department]
-GO
-
-ALTER TABLE [dbo].[pmPerson]  WITH CHECK ADD  CONSTRAINT [FK_Person_District] FOREIGN KEY([idResidentDistrict])
-REFERENCES [dbo].[pmDistrict] ([idDistrict])
-GO
-
-ALTER TABLE [dbo].[pmPerson] CHECK CONSTRAINT [FK_Person_District]
+ALTER TABLE [dbo].[pmPerson] CHECK CONSTRAINT [FK_Person_Department_Province_District]
 GO
 
 
