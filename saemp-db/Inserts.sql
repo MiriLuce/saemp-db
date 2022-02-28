@@ -332,95 +332,6 @@ INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Yibut
 SELECT * FROM [dbo].[pmCountry]
 
 
-/************* DEPARTMENT *************/
-
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Amazonas')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Ancash')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Apurimac')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Arequipa')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Ayacucho')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Cajamarca')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Callao')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Cusco')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Huancavelica')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Huanuco')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Ica')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Junin')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('La Libertad')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Lambayeque')
-INSERT INTO [dbo].[pmDepartment] ([name],[isDefault]) VALUES ('Lima',1)
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Loreto')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Madre De Dios')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Moquegua')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Pasco')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Piura')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Puno')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('San Martin')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Tacna')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Tumbes')
-INSERT INTO [dbo].[pmDepartment] ([name]) VALUES ('Ucayali')
-
-SELECT * FROM [dbo].[pmDepartment]
-
-
-/************* DISTRICT *************/
-
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'Bellavista')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'Callao')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'Carmen de La Legua')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'La Perla')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'La Punta')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (7,'Ventanilla')
-
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Ancón')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Ate Vitarte')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Barranco')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Breña')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Carabayllo')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Cercado de Lima')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Chaclacayo')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Chorrillos')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Cieneguilla')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Comas')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'El Agustino')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Independencia')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Jesús María')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'La Molina')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'La Victoria')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Lince')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Los Olivos')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Lurigancho (Chosica)')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Lurín')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Magdalena del Mar')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Miraflores')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Pachacamac')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Pucusana')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Pueblo Libre')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Puente Piedra')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Punta Hermosa')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Punta Negra')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Ricardo Palma')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Rímac')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Bartolo')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Borja')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Isidro')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Juan de Lurigancho')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Juan de Miraflores')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Luis')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Martín de Porres')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'San Miguel')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Santa Anita')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Santa Eulalia')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Santa María del Mar')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Santa Rosa')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Santiago de Surco')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Surquillo')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name],[isDefault]) VALUES (15,'Villa El Salvador',1)
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[name]) VALUES (15,'Villa María del Triunfo')
-
-SELECT * FROM [dbo].[pmDistrict]
-
-
 /************* RELATIONSHIP *************/
 
 INSERT INTO [dbo].[smRelationship] ([name],[isDefault]) VALUES ('Padre',1)
@@ -504,14 +415,13 @@ INSERT INTO [dbo].[amPaymentMethod] ([name],[abbreviation]) VALUES ('BANCO SCOTI
 SELECT * FROM [dbo].[amPaymentMethod]
 
 
-/************************ CAMPUS ********************************/
+/************************ INSTITUTION ********************************/
 
-INSERT INTO [dbo].[inCampus] ([name],[abbreviation]) VALUES ('COLEGIO EL ALBA','ALVA');
-INSERT INTO [dbo].[inCampus] ([name],[abbreviation]) VALUES ('ACADEMIA MAX PLANK','MAXPLANK');
---INSERT INTO [dbo].[inCampus] ([name],[abbreviation]) VALUES ('COLEGIO NUEVO HORIZONTE','ALVA');
+INSERT INTO [dbo].[inInstitution] ([name],[abbreviation]) VALUES ('COLEGIO EL ALBA','ALVA');
+INSERT INTO [dbo].[inInstitution] ([name],[abbreviation]) VALUES ('ACADEMIA MAX PLANK','MAXPLANK');
+INSERT INTO [dbo].[inInstitution] ([name],[abbreviation]) VALUES ('COLEGIO NUEVO HORIZONTE','ALVA');
 
-SELECT * FROM [dbo].[inCampus]
-
+SELECT * FROM [dbo].[inInstitution]
 
 
 /************************ DISCOUNT ****************************/

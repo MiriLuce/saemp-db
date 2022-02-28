@@ -43,6 +43,7 @@ CREATE TABLE [dbo].[pmDepartment]
 (
 	[idDepartment] [int] NOT NULL IDENTITY(1,1),
 	[name] [nvarchar](50) NOT NULL,
+	[code] [char](2) NOT NULL,
 	[isDefault] [bit] NOT NULL DEFAULT 0,
  CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED 
 (
@@ -52,13 +53,40 @@ CREATE TABLE [dbo].[pmDepartment]
 GO
 
 
+
+/************* PROVINCE *************/
+
+CREATE TABLE [dbo].[pmProvince]
+(
+	[idProvince] [int] NOT NULL IDENTITY(1,1),
+	[idDepartment] [int] NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+	[code] [char](2) NOT NULL,
+	[isDefault] [bit] NOT NULL DEFAULT 0,
+ CONSTRAINT [PK_Province] PRIMARY KEY CLUSTERED 
+(
+	[idProvince] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[pmProvince]  WITH CHECK ADD  CONSTRAINT [FK_Province_Department] FOREIGN KEY([idDepartment])
+REFERENCES [dbo].[pmDepartment] ([idDepartment])
+GO
+
+ALTER TABLE [dbo].[pmProvince] CHECK CONSTRAINT [FK_Province_Department]
+GO
+
 /************* DISTRICT *************/
 
 CREATE TABLE [dbo].[pmDistrict]
 (
 	[idDistrict] [int] NOT NULL IDENTITY(1,1),
 	[idDepartment] [int] NOT NULL,
+	[idProvince] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
+	[code] [char](2) NOT NULL,
+	[ubigeo] [char](6) NOT NULL UNIQUE,
 	[isDefault] [bit] NOT NULL DEFAULT 0,
  CONSTRAINT [PK_District] PRIMARY KEY CLUSTERED 
 (
@@ -72,6 +100,13 @@ REFERENCES [dbo].[pmDepartment] ([idDepartment])
 GO
 
 ALTER TABLE [dbo].[pmDistrict] CHECK CONSTRAINT [FK_District_Department]
+GO
+
+ALTER TABLE [dbo].[pmDistrict]  WITH CHECK ADD  CONSTRAINT [FK_District_Province] FOREIGN KEY([idProvince])
+REFERENCES [dbo].[pmProvince] ([idProvince])
+GO
+
+ALTER TABLE [dbo].[pmDistrict] CHECK CONSTRAINT [FK_District_Province]
 GO
 
 
@@ -395,11 +430,26 @@ GO
 /********************************************************************************************************/
 
 
+/************* INSTITUTION *************/
+
+CREATE TABLE [dbo].[inInstitution]
+(
+	[idInstitution] [int] NOT NULL IDENTITY(1,1),
+	[name] [nvarchar](50) NOT NULL,
+	[abbreviation] [nchar](15) NOT NULL,
+ CONSTRAINT [PK_Institution] PRIMARY KEY CLUSTERED 
+(
+	[idInstitution] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 /************* CAMPUS *************/
 
 CREATE TABLE [dbo].[inCampus]
 (
 	[idCampus] [int] NOT NULL IDENTITY(1,1),
+	[idInstitution] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[abbreviation] [nchar](15) NOT NULL,
 	[address] [nvarchar](200) NULL,
@@ -411,6 +461,12 @@ CREATE TABLE [dbo].[inCampus]
 ) ON [PRIMARY]
 GO
 
+ALTER TABLE [dbo].[inCampus]  WITH CHECK ADD  CONSTRAINT [FK_Campus_Institution] FOREIGN KEY([idInstitution])
+REFERENCES [dbo].[inInstitution] ([idInstitution])
+GO
+
+ALTER TABLE [dbo].[inCampus] CHECK CONSTRAINT [FK_Campus_Institution]
+GO
 
 /************* ROOM *************/
 
@@ -418,6 +474,7 @@ CREATE TABLE [dbo].[inRoom]
 (
 	[idRoom] [int] NOT NULL IDENTITY(1,1),
 	[idCampus] [int] NOT NULL,
+	[idInstitution] [int] NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[capacity] [int] NOT NULL,
  CONSTRAINT [PK_Room] PRIMARY KEY CLUSTERED 
@@ -433,6 +490,7 @@ GO
 
 ALTER TABLE [dbo].[inRoom] CHECK CONSTRAINT [FK_Room_Campus]
 GO
+
 
 
 /********************************************************************************************************/
