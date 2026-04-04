@@ -125,7 +125,7 @@ INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUE
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,4,'Huacaybamba','0909')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,5,'Huamalies','0904')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,6,'Leoncio Prado','0906')
-INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,7,'Mara�on','0905')
+INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,7,'Marañon','0905')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,8,'Pachitea','0907')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,9,'Puerto Inca','0908')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (10,10,'Lauricocha','0910')
@@ -157,13 +157,13 @@ INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUE
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (13,11,'Gran Chimu','1211')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (13,12,'Viru','1212')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,1,'Chiclayo','1301')
-INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,2,'Ferre�afe','1302')
+INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,2,'Ferreñafe','1302')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,3,'Lambayeque','1303')
-INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code],[isDefault]) VALUES (15,1,'Lima','1401',1)
+INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,1,'Lima','1401')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,2,'Barranca','1409')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,3,'Cajatambo','1402')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,4,'Canta','1403')
-INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,5,'Ca�ete','1404')
+INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,5,'Cañete','1404')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,6,'Huaral','1408')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,7,'Huarochiri','1406')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,8,'Huaura','1405')
@@ -175,7 +175,7 @@ INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUE
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (16,4,'Mariscal Ramon Castilla','1506')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (16,5,'Requena','1504')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (16,6,'Ucayali','1505')
-INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (16,7,'Datem del Mara�on','1507')
+INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (16,7,'Datem del Marañon','1507')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (17,1,'Tambopata','1601')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (17,2,'Manu','1602')
 INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (17,3,'Tahuamanu','1603')
@@ -461,7 +461,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,3,'Coishco','021308')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,4,'Macate','021303')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,5,'Moro','021304')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,6,'Nepe�a','021305')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,6,'Nepeña','021305')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,7,'Samanco','021306')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,8,'Santa','021307')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (2,18,9,'Nuevo Chimbote','021309')
@@ -528,8 +528,8 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,8,'Justo Apu Sahuaraura','030217')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,9,'Lucre','030208')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,10,'Pocohuanca','030209')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,11,'San Juan de Chac�a','030216')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,12,'Sa�ayca','030210')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,11,'San Juan de Chacña','030216')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,12,'Sañayca','030210')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,13,'Soraya','030211')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,14,'Tapairihua','030212')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (3,4,15,'Tintay','030213')
@@ -577,7 +577,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,12,'Paucarpata','040109')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,13,'Pocsi','040110')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,14,'Polobaya','040111')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,15,'Queque�a','040112')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,15,'Quequeña','040112')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,16,'Sabandia','040113')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,17,'Sachaca','040114')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,1,18,'San Juan de Siguas','040115')
@@ -597,7 +597,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,3,'Mariano Nicolas Valcarcel','040303')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,4,'Mariscal Caceres','040304')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,5,'Nicolas de Pierola','040305')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,6,'Oco�a','040306')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,6,'Ocoña','040306')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,7,'Quilca','040307')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,2,8,'Samuel Pastor','040308')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,3,1,'Caraveli','040401')
@@ -624,7 +624,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,9,'Orcopampa','040509')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,10,'Pampacolca','040510')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,11,'Tipan','040511')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,12,'U�on','040513')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,12,'Uñon','040513')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,13,'Uraca','040512')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,4,14,'Viraco','040514')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (4,5,1,'Chivay','040201')
@@ -718,14 +718,14 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,2,'Aucara','050502')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,3,'Cabana','050503')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,4,'Carmen Salcedo','050504')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,5,'Chavi�a','050506')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,5,'Chaviña','050506')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,6,'Chipao','050508')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,7,'Huac-Huas','050510')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,8,'Laramate','050511')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,9,'Leoncio Prado','050512')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,10,'Llauta','050514')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,11,'Lucanas','050513')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,12,'Oca�a','050516')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,12,'Ocaña','050516')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,13,'Otoca','050517')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,14,'Saisa','050529')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,15,'San Cristobal','050532')
@@ -737,7 +737,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,6,21,'Santa Lucia','050525')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,1,'Coracora','050601')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,2,'Chumpi','050605')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,3,'Coronel Casta�eda','050604')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,3,'Coronel Castañeda','050604')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,4,'Pacapausa','050608')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,5,'Pullo','050611')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,7,6,'Puyusca','050612')
@@ -757,7 +757,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,2,'Belen','051102')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,3,'Chalcos','051103')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,4,'Chilcayoc','051110')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,5,'Huaca�a','051109')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,5,'Huacaña','051109')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,6,'Morcolla','051111')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,7,'Paico','051105')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (5,9,8,'San Pedro de Larcay','051107')
@@ -788,10 +788,10 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,2,'Asuncion','060102')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,3,'Chetilla','060104')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,4,'Cospan','060103')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,5,'Enca�ada','060105')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,5,'Encañada','060105')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,6,'Jesus','060106')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,7,'Llacanora','060108')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,8,'Los Ba�os del Inca','060107')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,8,'Los Baños del Inca','060107')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,9,'Magdalena','060109')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,10,'Matara','060110')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,1,11,'Namora','060111')
@@ -903,7 +903,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,1,'Santa Cruz','060901')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,2,'Andabamba','060910')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,3,'Catache','060902')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,4,'Chancayba�os','060903')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,4,'Chancaybaños','060903')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,5,'La Esperanza','060904')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,6,'Ninabamba','060905')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (6,13,7,'Pulan','060906')
@@ -971,7 +971,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,4,'Colquemarca','070703')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,5,'Livitaca','070705')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,6,'Llusco','070706')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,7,'Qui�ota','070707')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,7,'Quiñota','070707')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,7,8,'Velille','070708')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,8,1,'Espinar','070801')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,8,2,'Condoroma','070802')
@@ -1005,7 +1005,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,11,3,'Challabamba','071104')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,11,4,'Colquepata','071103')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,11,5,'Huancarani','071106')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,11,6,'Kos�ipata','071105')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,11,6,'Kosñipata','071105')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,12,1,'Urcos','071201')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,12,2,'Andahuaylillas','071202')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (8,12,3,'Camanti','071203')
@@ -1112,7 +1112,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,6,'Daniel Hernandez','080509')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,7,'Huachocolpa','080511')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,8,'Huaribamba','080512')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,9,'�ahuimpuquio','080515')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,9,'Ñahuimpuquio','080515')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,10,'Pazos','080517')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,11,'Quishuar','080518')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (9,7,12,'Salcabamba','080519')
@@ -1161,7 +1161,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,6,'Miraflores','090406')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,7,'Monzon','090407')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,8,'Punchao','090408')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,9,'Pu�os','090409')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,9,'Puños','090409')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,10,'Singa','090410')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,5,11,'Tantamayo','090411')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,6,1,'Rupa-Rupa','090601')
@@ -1183,7 +1183,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,9,4,'Tournavista','090804')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,9,5,'Yuyapichis','090805')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,1,'Jesus','091001')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,2,'Ba�os','091002')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,2,'Baños','091002')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,3,'Jivia','091007')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,4,'Queropalca','091004')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,10,5,'Rondos','091006')
@@ -1198,7 +1198,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,11,7,'Pampamarca','091107')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (10,11,8,'Choras','091108')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,1,'Ica','100101')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,2,'La Tingui�a','100102')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,2,'La Tinguiña','100102')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,3,'Los Aquijes','100103')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,4,'Ocucaje','100114')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (11,1,5,'Pachacutec','100113')
@@ -1263,7 +1263,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,21,'Quilcas','110126')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,22,'San Agustin','110127')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,23,'San Jeronimo de Tunan','110128')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,24,'Sa�o','110132')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,24,'Saño','110132')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,25,'Sapallanga','110133')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,26,'Sicaya','110134')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,1,27,'Santo Domingo de Acobamba','110131')
@@ -1301,7 +1301,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,10,'Huertas','110309')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,11,'Janjaillo','110310')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,12,'Julcan','110311')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,13,'Leonor Ordo�ez','110312')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,13,'Leonor Ordoñez','110312')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,14,'Llocllapampa','110313')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,15,'Marco','110314')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (12,4,16,'Masma','110315')
@@ -1460,14 +1460,14 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,12,'Pimentel','130110')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,13,'Reque','130111')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,14,'Santa Rosa','130113')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,15,'Sa�a','130114')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,15,'Saña','130114')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,16,'Cayalti','130116')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,17,'Patapo','130117')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,18,'Pomalca','130118')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,19,'Pucala','130119')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,1,20,'Tuman','130120')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,1,'Ferre�afe','130201')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,2,'Ca�aris','130203')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,1,'Ferreñafe','130201')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,2,'Cañaris','130203')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,3,'Incahuasi','130202')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,4,'Manuel Antonio Mesones Muro','130206')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (14,2,5,'Pitipo','130204')
@@ -1488,7 +1488,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,2,'Ancon','140102')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,3,'Ate','140103')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,4,'Barranco','140125')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,5,'Bre�a','140104')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,5,'Breña','140104')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,6,'Carabayllo','140105')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,7,'Chaclacayo','140107')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,8,'Chorrillos','140108')
@@ -1525,7 +1525,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,39,'Santa Rosa','140129')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,40,'Santiago de Surco','140130')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,41,'Surquillo','140131')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo],[isDefault]) VALUES (15,1,42,'Villa El Salvador','140141',1)
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,42,'Villa El Salvador','140141')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,43,'Villa Maria del Triunfo','140132')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,2,1,'Barranca','140901')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,2,2,'Paramonga','140902')
@@ -1544,7 +1544,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,4,5,'Lachaqui','140305')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,4,6,'San Buenaventura','140306')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,4,7,'Santa Rosa de Quives','140307')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,1,'San Vicente de Ca�ete','140401')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,1,'San Vicente de Cañete','140401')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,2,'Asia','140416')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,3,'Calango','140402')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,4,'Cerro Azul','140403')
@@ -1559,7 +1559,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,13,'San Antonio','140412')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,14,'San Luis','140413')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,15,'Santa Cruz de Flores','140414')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,16,'Zu�iga','140415')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,5,16,'Zuñiga','140415')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,6,1,'Huaral','140801')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,6,2,'Atavillos Alto','140802')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,6,3,'Atavillos Bajo','140803')
@@ -1638,7 +1638,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,14,'Huancaya','140712')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,15,'Huangascar','140713')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,16,'Huantan','140714')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,17,'Hua�ec','140715')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,17,'Huañec','140715')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,18,'Laraos','140716')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,19,'Lincha','140717')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,20,'Madean','140731')
@@ -1653,7 +1653,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,29,'Tauripampa','140725')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,30,'Tomas','140727')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,31,'Tupe','140726')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,32,'Vi�ac','140728')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,32,'Viñac','140728')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,10,33,'Vitis','140729')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (16,1,1,'Iquitos','150101')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (16,1,2,'Alto Nanay','150102')
@@ -1714,7 +1714,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,2,2,'Fitzcarrald','160202')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,2,3,'Madre de Dios','160203')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,2,4,'Huepetuhe','160204')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,3,1,'I�apari','160301')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,3,1,'Iñapari','160301')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,3,2,'Iberia','160302')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (17,3,3,'Tahuamanu','160303')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,1,1,'Moquegua','170101')
@@ -1726,7 +1726,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,1,'Omate','170201')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,2,'Chojata','170203')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,3,'Coalaque','170202')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,4,'Ichu�a','170204')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,4,'Ichuña','170204')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,5,'La Capilla','170205')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,6,'Lloque','170206')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (18,2,7,'Matalaque','170207')
@@ -1818,7 +1818,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,6,6,'Miguel Checa','190605')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,6,7,'Querecotillo','190606')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,6,8,'Salitral','190607')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,7,1,'Pari�as','190701')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,7,1,'Pariñas','190701')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,7,2,'El Alto','190702')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,7,3,'La Brea','190703')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (20,7,4,'Lobitos','190704')
@@ -1838,7 +1838,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,6,'Chucuito','200106')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,7,'Coata','200105')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,8,'Huata','200107')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,9,'Ma�azo','200108')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,9,'Mañazo','200108')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,10,'Paucarcolla','200109')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,11,'Pichacani','200110')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,1,12,'Plateria','200114')
@@ -1852,7 +1852,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,5,'Caminaca','200205')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,6,'Chupa','200206')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,7,'Jose Domingo Choquehuanca','200207')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,8,'Mu�ani','200208')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,8,'Muñani','200208')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,9,'Potoni','200210')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,10,'Saman','200212')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,2,11,'San Anton','200213')
@@ -1905,7 +1905,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,3,'Cupi','200703')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,4,'Llalli','200704')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,5,'Macari','200705')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,6,'Nu�oa','200706')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,6,'Nuñoa','200706')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,7,'Orurillo','200707')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,8,'Santa Rosa','200708')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (21,8,9,'Umachiri','200709')
@@ -1966,7 +1966,7 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,2,'Alonso de Alvarado','210315')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,3,'Barranquita','210303')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,4,'Caynarachi','210304')
-INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,5,'Cu�umbuqui','210305')
+INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,5,'Cuñumbuqui','210305')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,6,'Pinto Recodo','210306')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,7,'Rumisapa','210307')
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (22,5,8,'San Roque de Cumbaza','210316')
@@ -2073,3 +2073,210 @@ INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],
 INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (25,4,1,'Purus','250401')
 
 SELECT * FROM [dbo].[pmDistrict]
+
+
+/************* COUNTRY *************/
+
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Afganistán','AFG','004');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Albania','ALB','008');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Alemania','DEU','276');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Andorra','AND','020');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Angola','AGO','024');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Anguila','AIA','660');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Antártida','ATA','010');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Antigua y Barbuda','ATG','028');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Arabia Saudita','SAU','682');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Argelia','DZA','012');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Argentina','ARG','032');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Armenia','ARM','051');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Aruba','ABW','533');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Australia','AUS','036');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Austria','AUT','040');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Azerbaiyán','AZE','031');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bahamas','BHS','044');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Baréin','BHR','048');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bangladés','BGD','050');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Barbados','BRB','052');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bielorrusia','BLR','112');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bélgica','BEL','056');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Belice','BLZ','084');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Benín','BEN','204');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bermudas','BMU','060');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bután','BTN','064');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bolivia','BOL','068');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bosnia y Herzegovina','BIH','070');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Botsuana','BWA','072');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Brasil','BRA','076');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Brunéi','BRN','096');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Bulgaria','BGR','100');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Burkina Faso','BFA','854');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Burundi','BDI','108');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Cabo Verde','CPV','132');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Camboya','KHM','116');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Camerún','CMR','120');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Canadá','CAN','124');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Chad','TCD','148');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Chile','CHL','152');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('China','CHN','156');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Chipre','CYP','196');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Colombia','COL','170');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Comoras','COM','174');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Congo','COG','178');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Congo, República Democrática','COD','180');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Corea del Norte','PRK','408');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Corea del Sur','KOR','410');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Costa Rica','CRI','188');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Costa de Marfil','CIV','384');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Croacia','HRV','191');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Cuba','CUB','192');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Dinamarca','DNK','208');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Dominica','DMA','212');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('República Dominicana','DOM','214');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Ecuador','ECU','218');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Egipto','EGY','818');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('El Salvador','SLV','222');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Emiratos Árabes Unidos','ARE','784');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Eritrea','ERI','232');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Eslovaquia','SVK','703');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Eslovenia','SVN','705');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('España','ESP','724');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Estados Unidos','USA','840');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Estonia','EST','233');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Etiopía','ETH','231');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Fiji','FJI','242');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Filipinas','PHL','608');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Finlandia','FIN','246');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Francia','FRA','250');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Gabón','GAB','266');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Gambia','GMB','270');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Georgia','GEO','268');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Ghana','GHA','288');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Granada','GRD','308');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Grecia','GRC','300');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Guatemala','GTM','320');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Guinea','GIN','324');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Guinea-Bisáu','GNB','624');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Guinea Ecuatorial','GNQ','226');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Guyana','GUY','328');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Haití','HTI','332');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Honduras','HND','340');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Hungría','HUN','348');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('India','IND','356');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Indonesia','IDN','360');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Irak','IRQ','368');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Irán','IRN','364');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Irlanda','IRL','372');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Islandia','ISL','352');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Islas Marshall','MHL','584');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Islas Salomón','SLB','090');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Israel','ISR','376');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Italia','ITA','380');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Jamaica','JAM','388');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Japón','JPN','392');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Jordania','JOR','400');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Kazajistán','KAZ','398');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Kenia','KEN','404');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Kirguistán','KGZ','417');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Kiribati','KIR','296');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Kuwait','KWT','414');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Laos','LAO','418');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Letonia','LVA','428');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Líbano','LBN','422');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Liberia','LBR','430');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Libia','LBY','434');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Liechtenstein','LIE','438');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Lituania','LTU','440');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Luxemburgo','LUX','442');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Madagascar','MDG','450');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Malasia','MYS','458');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Malaui','MWI','454');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Maldivas','MDV','462');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Malí','MLI','466');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Malta','MLT','470');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Marruecos','MAR','504');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Mauricio','MUS','480');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Mauritania','MRT','478');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('México','MEX','484');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Micronesia','FSM','583');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Moldavia','MDA','498');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Mónaco','MCO','492');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Mongolia','MNG','496');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Montenegro','MNE','499');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Mozambique','MOZ','508');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Myanmar','MMR','104');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Namibia','NAM','516');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Nauru','NRU','520');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Nepal','NPL','524');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Nicaragua','NIC','558');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Níger','NER','562');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Nigeria','NGA','566');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Noruega','NOR','578');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Nueva Zelanda','NZL','554');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Omán','OMN','512');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Países Bajos','NLD','528');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Pakistán','PAK','586');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Palaos','PLW','585');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Palestina','PSE','275');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Panamá','PAN','591');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Papúa Nueva Guinea','PNG','598');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Paraguay','PRY','600');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Perú','PER','604');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Polonia','POL','616');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Portugal','PRT','620');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Qatar','QAT','634');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Reino Unido','GBR','826');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('República Centroafricana','CAF','140');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('República Checa','CZE','203');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('República de Macedonia del Norte','MKD','807');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('República del Congo','COG','178');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Ruanda','RWA','646');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Rumania','ROU','642');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Rusia','RUS','643');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Ruanda','RWA','646');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Rumania','ROU','642');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Rusia','RUS','643');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Samoa','WSM','882');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('San Cristóbal y Nieves','KNA','659');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('San Marino','SMR','674');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('San Vicente y las Granadinas','VCT','670');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Santa Lucía','LCA','662');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Santo Tomé y Príncipe','STP','678');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Senegal','SEN','686');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Serbia','SRB','688');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Seychelles','SYC','690');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Sierra Leona','SLE','694');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Singapur','SGP','702');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Siria','SYR','760');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Somalia','SOM','706');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Sri Lanka','LKA','144');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Sudáfrica','ZAF','710');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Sudán','SDN','729');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Sudán del Sur','SSD','728');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Suecia','SWE','752');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Suiza','CHE','756');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Surinam','SUR','740');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Tailandia','THA','764');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Tanzania','TZA','834');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Tayikistán','TJK','762');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Timor Oriental','TLS','626');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Togo','TGO','768');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Tonga','TON','776');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Trinidad y Tobago','TTO','780');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Túnez','TUN','788');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Turkmenistán','TKM','795');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Turquía','TUR','792');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Tuvalu','TUV','798');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Ucrania','UKR','804');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Uganda','UGA','800');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Uruguay','URY','858');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Uzbekistán','UZB','860');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Vanuatu','VUT','548');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Vaticano','VAT','336');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Venezuela','VEN','862');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Vietnam','VNM','704');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Yemen','YEM','887');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Yibuti','DJI','262');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Zambia','ZMB','894');
+INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Zimbabue','ZWE','716');
+
+SELECT * FROM [dbo].[pmCountry]

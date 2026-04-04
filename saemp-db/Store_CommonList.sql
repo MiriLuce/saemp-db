@@ -17,7 +17,8 @@ BEGIN
 		lengthType,
 		characterType,
 		nationalityType,
-		isActive
+		isActive,
+		isDefault
 	FROM dbo.pmTypeDocumentIdentity
 	WHERE dbo.pmTypeDocumentIdentity.isActive = 1		
 END
@@ -79,9 +80,9 @@ BEGIN
 	WHERE (ISNULL(@pIdDepartment,0) = 0 OR idDepartment = @pIdDepartment)
 	ORDER BY isDefault DESC, name ASC
 END
-REVOKE EXECUTE ON dbo.pmDepartmentList TO PUBLIC
+REVOKE EXECUTE ON dbo.pmProvinceList TO PUBLIC
 GO
-GRANT EXECUTE ON dbo.pmDepartmentList TO Consultant
+GRANT EXECUTE ON dbo.pmProvinceList TO Consultant
 GO
 
 DROP PROCEDURE IF EXISTS dbo.pmDistrictList
@@ -107,47 +108,90 @@ REVOKE EXECUTE ON dbo.pmDistrictList TO PUBLIC
 GO
 GRANT EXECUTE ON dbo.pmDistrictList TO Consultant
 GO
-/*
-DROP PROCEDURE IF EXISTS dbo.pmPersonNew
+
+DROP PROCEDURE IF EXISTS dbo.smRelationshipList
 GO
-CREATE PROCEDURE dbo.pmPersonNew
-	@inIdTypeDocumentIdentity	int,
-	@isDocumentIdentity		nvarchar(20),
-	firstName					nvarchar(100),
-	middleName				nvarchar(100),
-	fatherlastName			nvarchar(150),
-	motherlastName			nvarchar(150),
-	email						nvarchar(150),
-	birthday					date,
-	idBirthCountry			int,
-	idResidentDepartment		int,
-	idResidentDistrict		int,
-	address					nvarchar(200),
-	addressReference			nvarchar(200)
+CREATE PROCEDURE dbo.smRelationshipList 
 AS
 BEGIN
-	IF EXISTS(SELECT COUNT(1) FROM dbo.pmPerson) WHERE idTypeDocumentIdentity = idTypeDocumentIdentity
-	
-	INSERT INTO dbo.epPerson
-	(
-		idTypeDocumentIdentity	int,
-		documentIdentity			nvarchar(20),
-		firstName					nvarchar(100),
-		middleName				nvarchar(100),
-		fatherlastName			nvarchar(150),
-		motherlastName			nvarchar(150),
-		email						nvarchar(150),
-		birthday					date,
-		idBirthCountry			int,
-		idResidentDepartment		int,
-		idResidentDistrict		int,
-		address					nvarchar(200),
-		addressReference			nvarchar(200)
-	
-	)
+	SELECT
+		idRelationship,
+		name,
+		isDefault
+	FROM dbo.smRelationship
+	ORDER BY isDefault DESC, name ASC
 END
-REVOKE EXECUTE ON dbo.pmPersonNew TO PUBLIC
+REVOKE EXECUTE ON dbo.smRelationshipList TO PUBLIC
 GO
-GRANT EXECUTE ON dbo.pmPersonNew TO Consultant
+GRANT EXECUTE ON dbo.smRelationshipList TO Consultant
 GO
-*/
+
+DROP PROCEDURE IF EXISTS dbo.pmPhoneTypeList
+GO
+CREATE PROCEDURE dbo.pmPhoneTypeList 
+AS
+BEGIN
+	SELECT
+		idPhoneType,
+		name
+	FROM dbo.pmPhoneType
+	ORDER BY name ASC
+END
+REVOKE EXECUTE ON dbo.pmPhoneTypeList TO PUBLIC
+GO
+GRANT EXECUTE ON dbo.pmPhoneTypeList TO Consultant
+GO
+
+DROP PROCEDURE IF EXISTS dbo.epAcademicLevelList
+GO
+CREATE PROCEDURE dbo.epAcademicLevelList 
+AS
+BEGIN
+	SELECT
+		idAcademicLevel,
+		name,
+		abbreviation
+	FROM dbo.epAcademicLevel
+	ORDER BY idAcademicLevel ASC
+END
+REVOKE EXECUTE ON dbo.epAcademicLevelList TO PUBLIC
+GO
+GRANT EXECUTE ON dbo.epAcademicLevelList TO Consultant
+GO
+
+DROP PROCEDURE IF EXISTS dbo.epSchoolLevelList
+GO
+CREATE PROCEDURE dbo.epSchoolLevelList (
+	@pIdAcademicLevel int = 0
+) AS
+BEGIN
+	SELECT
+		idSchoolLevel,
+		idAcademicLevel,
+		name,
+		abbreviation
+	FROM dbo.epSchoolLevel
+	WHERE (ISNULL(@pIdAcademicLevel,0) = 0 OR idAcademicLevel = @pIdAcademicLevel)
+	ORDER BY idSchoolLevel ASC
+END
+REVOKE EXECUTE ON dbo.epSchoolLevelList TO PUBLIC
+GO
+GRANT EXECUTE ON dbo.epSchoolLevelList TO Consultant
+GO
+
+DROP PROCEDURE IF EXISTS dbo.smScholarStatusList
+GO
+CREATE PROCEDURE dbo.smScholarStatusList 
+AS
+BEGIN
+	SELECT
+		idScholarStatus,
+		name,
+		abbreviation
+	FROM dbo.smScholarStatus
+	ORDER BY name ASC
+END
+REVOKE EXECUTE ON dbo.smScholarStatusList TO PUBLIC
+GO
+GRANT EXECUTE ON dbo.smScholarStatusList TO Consultant
+GO
