@@ -165,7 +165,7 @@ BEGIN TRY
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,1,'Chiclayo','1301')
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,2,'Ferreñafe','1302')
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (14,3,'Lambayeque','1303')
-    INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,1,'Lima','1401')
+    INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code],[isDefault]) VALUES (15,1,'Lima','1401', 1)
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,2,'Barranca','1409')
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,3,'Cajatambo','1402')
     INSERT INTO [dbo].[pmProvince] ([idDepartment],[idProvince],[name],[code]) VALUES (15,4,'Canta','1403')
@@ -1531,7 +1531,7 @@ BEGIN TRY
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,39,'Santa Rosa','140129')
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,40,'Santiago de Surco','140130')
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,41,'Surquillo','140131')
-    INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,42,'Villa El Salvador','140141')
+    INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo],[isDefault]) VALUES (15,1,42,'Villa El Salvador','140141',1)
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,1,43,'Villa Maria del Triunfo','140132')
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,2,1,'Barranca','140901')
     INSERT INTO [dbo].[pmDistrict] ([idDepartment],[idProvince],[idDistrict],[name],[ubigeo]) VALUES (15,2,2,'Paramonga','140902')
@@ -2226,7 +2226,7 @@ BEGIN TRY
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Panamá','PAN','591');
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Papúa Nueva Guinea','PNG','598');
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Paraguay','PRY','600');
-    INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Perú','PER','604');
+    INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode],[isDefault]) VALUES ('Perú','PER','604',1);
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Polonia','POL','616');
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Portugal','PRT','620');
     INSERT INTO [dbo].[pmCountry] ([name],[letterCode],[numericCode]) VALUES ('Qatar','QAT','634');

@@ -21,7 +21,6 @@ BEGIN
 		lengthType,
 		characterType,
 		nationalityType,
-		isActive,
 		isDefault
 	FROM dbo.pmTypeDocumentIdentity
 	WHERE isActive = 1
