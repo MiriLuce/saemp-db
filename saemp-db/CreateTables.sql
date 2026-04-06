@@ -38,6 +38,7 @@ BEGIN TRY
         [letterCode]    [nchar](3)     NOT NULL,
         [numericCode]   [nchar](3)     NOT NULL,
         [isDefault]     [bit]          NOT NULL DEFAULT 0,
+        [isActive]      [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Country] PRIMARY KEY CLUSTERED ([idCountry] ASC)
     )
 
@@ -50,6 +51,7 @@ BEGIN TRY
         [name]          [nvarchar](50) NOT NULL,
         [code]          [char](2)      NOT NULL,
         [isDefault]     [bit]          NOT NULL DEFAULT 0,
+        [isActive]      [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED ([idDepartment] ASC)
     )
 
@@ -63,6 +65,7 @@ BEGIN TRY
         [name]          [nvarchar](50) NOT NULL,
         [code]          [char](4)      NOT NULL,
         [isDefault]     [bit]          NOT NULL DEFAULT 0,
+        [isActive]      [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Province] PRIMARY KEY CLUSTERED ([idDepartment] ASC, [idProvince] ASC)
     )
 
@@ -82,6 +85,7 @@ BEGIN TRY
         [name]          [nvarchar](50) NOT NULL,
         [ubigeo]        [char](6)      NOT NULL UNIQUE,
         [isDefault]     [bit]          NOT NULL DEFAULT 0,
+        [isActive]      [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_District] PRIMARY KEY CLUSTERED ([idDepartment] ASC, [idProvince] ASC, [idDistrict] ASC)
     )
 
@@ -103,6 +107,7 @@ BEGIN TRY
         [characterType]             [char](1)       NULL, -- A: alphanumeric, N: numeric
         [nationalityType]           [char](1)       NULL, -- N: national, E: foreign, A: both
         [isDefault]                 [bit]           NOT NULL DEFAULT 0,
+        [isActive]                  [bit]           NOT NULL DEFAULT 1,
         CONSTRAINT [PK_TypeDocumentIdentity] PRIMARY KEY CLUSTERED ([idTypeDocumentIdentity] ASC)
     )
 
@@ -148,6 +153,7 @@ BEGIN TRY
     (
         [idPhoneType]   [smallint]     NOT NULL IDENTITY(1,1),
         [name]          [nvarchar](25) NOT NULL,
+        [isActive]      [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_PhoneType] PRIMARY KEY CLUSTERED ([idPhoneType] ASC)
     )
 
@@ -193,6 +199,7 @@ BEGIN TRY
         [idJobTitle]    [int]           NOT NULL IDENTITY(1,1),
         [name]          [nvarchar](50)  NOT NULL,
         [abbreviation]  [nvarchar](10)  NOT NULL,
+        [isActive]      [bit]           NOT NULL DEFAULT 1,
         CONSTRAINT [PK_JobTitle] PRIMARY KEY CLUSTERED ([idJobTitle] ASC)
     )
 
@@ -275,6 +282,7 @@ BEGIN TRY
         [idInstitution] [int]           NOT NULL IDENTITY(1,1),
         [name]          [nvarchar](50)  NOT NULL,
         [abbreviation]  [nvarchar](15)  NOT NULL,
+        [isActive]      [bit]           NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Institution] PRIMARY KEY CLUSTERED ([idInstitution] ASC)
     )
 
@@ -287,6 +295,7 @@ BEGIN TRY
         [idInstitution] [int]           NOT NULL,
         [name]          [nvarchar](50)  NOT NULL,
         [abbreviation]  [nvarchar](15)  NOT NULL,
+        [isActive]      [bit]           NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Campus] PRIMARY KEY CLUSTERED ([idCampus] ASC)
     )
 
@@ -351,6 +360,7 @@ BEGIN TRY
         [idPaymentStatus]   [smallint]     NOT NULL IDENTITY(1,1),
         [name]              [nvarchar](50) NOT NULL,
         [abbreviation]      [nchar](10)    NOT NULL,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_PaymentStatus] PRIMARY KEY CLUSTERED ([idPaymentStatus] ASC)
     )
 
@@ -362,6 +372,7 @@ BEGIN TRY
         [idPaymentMethod]   [smallint]     NOT NULL IDENTITY(1,1),
         [name]              [nvarchar](50) NOT NULL,
         [abbreviation]      [nchar](10)    NOT NULL,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_PaymentMethod] PRIMARY KEY CLUSTERED ([idPaymentMethod] ASC)
     )
 
@@ -664,6 +675,7 @@ BEGIN TRY
         [idRelationship]    [int]          NOT NULL IDENTITY(1,1),
         [name]              [nvarchar](50) NOT NULL,
         [isDefault]         [bit]          NOT NULL DEFAULT 0,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_Relationship] PRIMARY KEY CLUSTERED ([idRelationship] ASC)
     )
 
@@ -768,6 +780,7 @@ BEGIN TRY
         [idScholarStatus]   [smallint]     NOT NULL IDENTITY(1,1),
         [name]              [nvarchar](50) NOT NULL,
         [abbreviation]      [nvarchar](5)  NOT NULL,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_ScholarStatus] PRIMARY KEY CLUSTERED ([idScholarStatus] ASC)
     )
 
@@ -852,6 +865,7 @@ BEGIN TRY
         [idAcademicLevel]   [smallint]     NOT NULL IDENTITY(1,1),
         [name]              [nvarchar](50) NOT NULL,
         [abbreviation]      [nchar](3)     NOT NULL,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_AcademicLevel] PRIMARY KEY CLUSTERED ([idAcademicLevel] ASC)
     )
 
@@ -864,6 +878,7 @@ BEGIN TRY
         [idAcademicLevel]   [smallint]     NOT NULL,
         [name]              [nvarchar](50) NOT NULL,
         [abbreviation]      [nvarchar](5)  NOT NULL,
+        [isActive]          [bit]          NOT NULL DEFAULT 1,
         CONSTRAINT [PK_SchoolLevel] PRIMARY KEY CLUSTERED ([idSchoolLevel] ASC)
     )
 
@@ -1226,6 +1241,9 @@ BEGIN TRY
 
     -- Write all tables (catalog tables will be restricted below)
     GRANT INSERT, UPDATE ON SCHEMA::dbo TO mpams_app;
+
+    -- Execute all stored procedures
+    GRANT EXECUTE ON SCHEMA::dbo TO mpams_app;
 
     -- No hard deletes — soft delete pattern enforced at DB level
     DENY DELETE ON SCHEMA::dbo TO mpams_app;
