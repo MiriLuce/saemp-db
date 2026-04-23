@@ -2,7 +2,7 @@ USE DBMpams
 GO
 
 /************************************************************************************************************************
- * MODULE  : SAEMP - Store Person Management
+ * MODULE  : MP-AMS - Store Person Management
  * DESC    : Procedures for managing person records, including creation, update, and phone management.
  ************************************************************************************************************************/
 
@@ -114,7 +114,7 @@ END
 GO
 
 /************************************************************************************************************************
- * MODULE  : SAEMP - Store Employee Management
+ * MODULE  : MP-AMS - Store Employee Management
  * DESC    : Procedures for managing employees
  ************************************************************************************************************************/
 
@@ -470,7 +470,7 @@ END
 GO
 
 /************************************************************************************************************************
- * MODULE  : SAEMP - Store Authentication
+ * MODULE  : MP-AMS - Store Authentication
  * DESC    : Procedures for user login, password change, and password reset.
  ************************************************************************************************************************/
 
