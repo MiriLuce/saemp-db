@@ -248,10 +248,13 @@ BEGIN TRY
         [isPerHour]             [bit]           NOT NULL DEFAULT 0,
         [admissionDate]         [datetime]      NOT NULL,
         [cessationDate]         [datetime]      NULL,
+        [isActive]              [bit]           NOT NULL DEFAULT 1,
         [registrationDate]      [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_EmploymentContract] PRIMARY KEY CLUSTERED ([idEmploymentContract] ASC)
     )
 
@@ -272,6 +275,7 @@ BEGIN TRY
      * DESC    : Manages the physical structure of the institution, including campuses and rooms.
      *           Defined before Finance because fnPaymentAccount references inCampus.
      * TABLES  : inInstitution, inCampus, inRoom
+     * NOTE    : Academic content (disciplines, subjects, teacher qualifications) was moved to the AC module.
      ************************************************************************************************************************/
 
 
@@ -318,6 +322,8 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [deletedDate]       [datetime]      NULL,
+        [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_Room] PRIMARY KEY CLUSTERED ([idRoom] ASC)
     )
 
@@ -426,10 +432,13 @@ BEGIN TRY
         [startDate]         [datetime]      NOT NULL,
         [endDate]           [datetime]      NULL,
         [isRate]            [bit]           NOT NULL DEFAULT 0,
+        [isActive]          [bit]           NOT NULL DEFAULT 1,
         [registrationDate]  [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [deletedDate]       [datetime]      NULL,
+        [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_DiscountVersion] PRIMARY KEY CLUSTERED ([idDiscountVersion] ASC)
     )
 
@@ -467,6 +476,7 @@ BEGIN TRY
         [amount]            [decimal](12,2) NOT NULL,
         [description]       [nvarchar](250) NULL,
         [expenseDate]       [date]          NOT NULL,
+        [isActive]          [bit]           NOT NULL DEFAULT 1,
         [registrationDate]  [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
@@ -504,10 +514,13 @@ BEGIN TRY
         [idPayerTypeDocument]   [int]           NULL,
         [payerDocument]         [nvarchar](20)  NULL, -- DNI/RUC for electronic receipts
         [comment]               [nvarchar](250) NULL,
+        [isActive]              [bit]           NOT NULL DEFAULT 1,
         [registrationDate]      [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_PaymentReceipt] PRIMARY KEY CLUSTERED ([idPaymentReceipt] ASC)
     )
 
@@ -539,8 +552,13 @@ BEGIN TRY
         [idStudentFeeInstallment]   [bigint]        NOT NULL,
         [amountPaid]                [decimal](12,2) NOT NULL,
         [description]               [nvarchar](250) NULL,
+        [isActive]                  [bit]           NOT NULL DEFAULT 1,
         [registrationDate]          [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]          [int]           NOT NULL DEFAULT 0,
+        [modifiedDate]              [datetime]      NULL,
+        [modifiedUser]              [int]           NULL,
+        [deletedDate]               [datetime]      NULL,
+        [deletedUser]               [int]           NULL,
         CONSTRAINT [PK_PaymentReceiptDetail] PRIMARY KEY CLUSTERED ([idPaymentReceiptDetail] ASC)
     )
 
@@ -651,6 +669,8 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_Student] PRIMARY KEY CLUSTERED ([idStudent] ASC)
     )
 
@@ -750,10 +770,13 @@ BEGIN TRY
         [receptionDate]         [datetime]      NULL,
         [estimatedDate]         [datetime]      NULL,
         [description]           [nvarchar](200) NULL,
+        [isActive]              [bit]           NOT NULL DEFAULT 1,
         [registrationDate]      [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_StudentDocument] PRIMARY KEY CLUSTERED ([idStudentDocument] ASC)
     )
 

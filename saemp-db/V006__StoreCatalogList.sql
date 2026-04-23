@@ -8,9 +8,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.pmTypeDocumentIdentityList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetDocumentIdentityTypes
 GO
-CREATE PROCEDURE dbo.pmTypeDocumentIdentityList
+CREATE PROCEDURE dbo.usp_pm_GetDocumentIdentityTypes
 AS
 BEGIN
 	SELECT
@@ -27,9 +27,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.pmCountryList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetCountries
 GO
-CREATE PROCEDURE dbo.pmCountryList
+CREATE PROCEDURE dbo.usp_pm_GetCountries
 AS
 BEGIN
 	SELECT
@@ -44,9 +44,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.pmDepartmentList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetDepartments
 GO
-CREATE PROCEDURE dbo.pmDepartmentList
+CREATE PROCEDURE dbo.usp_pm_GetDepartments
 AS
 BEGIN
 	SELECT
@@ -60,9 +60,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.pmProvinceList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetProvinces
 GO
-CREATE PROCEDURE dbo.pmProvinceList (
+CREATE PROCEDURE dbo.usp_pm_GetProvinces (
 	@pIdDepartment int = 0
 ) AS
 BEGIN
@@ -79,9 +79,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.pmDistrictList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetDistricts
 GO
-CREATE PROCEDURE dbo.pmDistrictList (
+CREATE PROCEDURE dbo.usp_pm_GetDistricts (
 	@pIdDepartment int = 0,
 	@pIdProvince   int = 0
 ) AS
@@ -101,9 +101,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.pmPhoneTypeList
+DROP PROCEDURE IF EXISTS dbo.usp_pm_GetPhoneTypes
 GO
-CREATE PROCEDURE dbo.pmPhoneTypeList
+CREATE PROCEDURE dbo.usp_pm_GetPhoneTypes
 AS
 BEGIN
 	SELECT
@@ -122,9 +122,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.hrJobTitleList
+DROP PROCEDURE IF EXISTS dbo.usp_hr_GetJobTitles
 GO
-CREATE PROCEDURE dbo.hrJobTitleList
+CREATE PROCEDURE dbo.usp_hr_GetJobTitles
 AS
 BEGIN
 	SELECT
@@ -144,9 +144,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.inInstitutionList
+DROP PROCEDURE IF EXISTS dbo.usp_in_GetInstitutions
 GO
-CREATE PROCEDURE dbo.inInstitutionList
+CREATE PROCEDURE dbo.usp_in_GetInstitutions
 AS
 BEGIN
 	SELECT
@@ -159,9 +159,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.inCampusList
+DROP PROCEDURE IF EXISTS dbo.usp_in_GetCampuses
 GO
-CREATE PROCEDURE dbo.inCampusList (
+CREATE PROCEDURE dbo.usp_in_GetCampuses (
 	@pIdInstitution int = 0
 ) AS
 BEGIN
@@ -177,9 +177,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.inRoomList
+DROP PROCEDURE IF EXISTS dbo.usp_in_GetRooms
 GO
-CREATE PROCEDURE dbo.inRoomList (
+CREATE PROCEDURE dbo.usp_in_GetRooms (
 	@pIdCampus int = 0
 ) AS
 BEGIN
@@ -204,9 +204,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.fnPaymentConceptList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetPaymentConcepts
 GO
-CREATE PROCEDURE dbo.fnPaymentConceptList
+CREATE PROCEDURE dbo.usp_fn_GetPaymentConcepts
 AS
 BEGIN
 	SELECT
@@ -219,9 +219,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.fnPaymentStatusList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetPaymentStatuses
 GO
-CREATE PROCEDURE dbo.fnPaymentStatusList
+CREATE PROCEDURE dbo.usp_fn_GetPaymentStatuses
 AS
 BEGIN
 	SELECT
@@ -234,9 +234,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.fnPaymentMethodList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetPaymentMethods
 GO
-CREATE PROCEDURE dbo.fnPaymentMethodList
+CREATE PROCEDURE dbo.usp_fn_GetPaymentMethods
 AS
 BEGIN
 	SELECT
@@ -249,9 +249,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.fnPaymentAccountList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetPaymentAccounts
 GO
-CREATE PROCEDURE dbo.fnPaymentAccountList (
+CREATE PROCEDURE dbo.usp_fn_GetPaymentAccounts (
 	@pIdPaymentMethod int = 0,
 	@pIdCampus        int = 0
 ) AS
@@ -272,9 +272,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.fnExpenseConceptList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetExpenseConcepts
 GO
-CREATE PROCEDURE dbo.fnExpenseConceptList
+CREATE PROCEDURE dbo.usp_fn_GetExpenseConcepts
 AS
 BEGIN
 	SELECT
@@ -287,9 +287,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.fnDiscountList
+DROP PROCEDURE IF EXISTS dbo.usp_fn_GetDiscounts
 GO
-CREATE PROCEDURE dbo.fnDiscountList
+CREATE PROCEDURE dbo.usp_fn_GetDiscounts
 AS
 BEGIN
 	SELECT
@@ -310,9 +310,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.smStudentDocumentTypeList
+DROP PROCEDURE IF EXISTS dbo.usp_sm_GetStudentDocumentTypes
 GO
-CREATE PROCEDURE dbo.smStudentDocumentTypeList
+CREATE PROCEDURE dbo.usp_sm_GetStudentDocumentTypes
 AS
 BEGIN
 	SELECT
@@ -326,9 +326,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.smRelationshipList
+DROP PROCEDURE IF EXISTS dbo.usp_sm_GetRelationships
 GO
-CREATE PROCEDURE dbo.smRelationshipList
+CREATE PROCEDURE dbo.usp_sm_GetRelationships
 AS
 BEGIN
 	SELECT
@@ -341,9 +341,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.smScholarStatusList
+DROP PROCEDURE IF EXISTS dbo.usp_sm_GetScholarStatuses
 GO
-CREATE PROCEDURE dbo.smScholarStatusList
+CREATE PROCEDURE dbo.usp_sm_GetScholarStatuses
 AS
 BEGIN
 	SELECT
@@ -363,9 +363,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.emAcademicLevelList
+DROP PROCEDURE IF EXISTS dbo.usp_em_GetAcademicLevels
 GO
-CREATE PROCEDURE dbo.emAcademicLevelList
+CREATE PROCEDURE dbo.usp_em_GetAcademicLevels
 AS
 BEGIN
 	SELECT
@@ -378,9 +378,9 @@ BEGIN
 END
 GO
 
-DROP PROCEDURE IF EXISTS dbo.emSchoolLevelList
+DROP PROCEDURE IF EXISTS dbo.usp_em_GetSchoolLevels
 GO
-CREATE PROCEDURE dbo.emSchoolLevelList (
+CREATE PROCEDURE dbo.usp_em_GetSchoolLevels (
 	@pIdAcademicLevel int = 0
 ) AS
 BEGIN
@@ -403,9 +403,9 @@ GO
  ************************************************************************************************************************/
 
 
-DROP PROCEDURE IF EXISTS dbo.syRoleList
+DROP PROCEDURE IF EXISTS dbo.usp_sy_GetRoles
 GO
-CREATE PROCEDURE dbo.syRoleList
+CREATE PROCEDURE dbo.usp_sy_GetRoles
 AS
 BEGIN
 	SELECT
