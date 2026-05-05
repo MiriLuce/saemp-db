@@ -44,6 +44,6 @@ BEGIN
     FROM <TableName> t
     INNER JOIN inserted i ON t.<PK> = i.<PK>
     INNER JOIN deleted d ON t.<PK> = d.<PK>
-    WHERE d.isActive = 1 AND i.isActive = 0; -- Solo cuando pasa de activo a inactivo
+    WHERE d.isDeleted = 0 AND i.isDeleted = 1; -- Solo cuando el registro es marcado como eliminado
 END;
 GO

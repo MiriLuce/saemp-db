@@ -150,18 +150,19 @@ BEGIN
         (
             SELECT TOP 1 ph.number
             FROM dbo.pmPhone ph
-            WHERE ph.idPerson = e.idEmployee AND ph.isActive = 1 AND ph.idPhoneType = 2 AND ph.isForEmergency = 0
+            WHERE ph.idPerson = e.idEmployee AND ph.isActive = 1 AND ph.isDeleted = 0 AND ph.idPhoneType = 2 AND ph.isForEmergency = 0
         ) AS mobilePhone,
         (
             SELECT TOP 1 ph.number
             FROM dbo.pmPhone ph
-            WHERE ph.idPerson = e.idEmployee AND ph.isActive = 1 AND ph.isForEmergency = 1
+            WHERE ph.idPerson = e.idEmployee AND ph.isActive = 1 AND ph.isDeleted = 0 AND ph.isForEmergency = 1
         ) AS emergencyPhone,
         CASE WHEN EXISTS (SELECT 1 FROM dbo.syUser u WHERE u.idEmployee = e.idEmployee AND u.isActive = 1)
         THEN 1 ELSE 0 END AS hasUser
     FROM dbo.hrEmployee e
     JOIN dbo.pmPerson p ON e.idEmployee = p.idPerson
     WHERE e.isActive = 1
+    AND   e.isDeleted = 0
     AND (
         NULLIF(LTRIM(RTRIM(@pSearchTerm)), '') IS NULL
         OR CONCAT(p.firstName, ' ', p.middleName, ' ', p.fatherLastName, ' ', p.motherLastName) LIKE '%' + @pSearchTerm + '%' COLLATE Latin1_General_CS_AS
@@ -342,7 +343,7 @@ BEGIN
 
         EXEC sp_set_session_context @key = N'IdUser', @value = @pIdUserActing;
 
-        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee)
+        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isDeleted = 0)
         BEGIN
             RAISERROR('Employee not found.', 16, 1)
         END
@@ -440,7 +441,7 @@ BEGIN
 
         EXEC sp_set_session_context @key = N'IdUser', @value = @pIdUserActing;
 
-        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1)
+        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1 AND isDeleted = 0)
         BEGIN
             RAISERROR('Employee not found or is not active.', 16, 1)
         END
@@ -500,7 +501,7 @@ BEGIN
     LEFT JOIN dbo.hrEmploymentContract c ON e.idEmployee = c.idEmployee AND c.isActive = 1
     LEFT JOIN dbo.hrJobTitle j ON c.idJobTitle = j.idJobTitle
     LEFT JOIN dbo.syUserRole ur ON u.idUser = ur.idUser
-    LEFT JOIN dbo.syRole r ON ur.idRole = r.idRole AND r.isActive = 1
+    LEFT JOIN dbo.syRole r ON ur.idRole = r.idRole AND r.isActive = 1 AND r.isDeleted = 0
     WHERE (
         NULLIF(LTRIM(RTRIM(@pSearchTerm)), '') IS NULL
         OR CONCAT(p.firstName, ' ', p.middleName, ' ', p.fatherLastName, ' ', p.motherLastName) LIKE '%' + @pSearchTerm + '%' COLLATE Latin1_General_CS_AS
@@ -544,7 +545,7 @@ BEGIN
         r.name AS roleName
     FROM dbo.syUserRole ur
     JOIN dbo.syRole r ON ur.idRole = r.idRole
-    WHERE ur.idUser = @pIdUser AND r.isActive = 1
+    WHERE ur.idUser = @pIdUser AND r.isActive = 1 AND r.isDeleted = 0
 END
 GO
 
@@ -565,13 +566,13 @@ BEGIN
 
         EXEC sp_set_session_context @key = N'IdUser', @value = @pIdUserActing;
 
-        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1)
+        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1 AND isDeleted = 0)
         BEGIN
             RAISERROR('Employee does not exist or is not active.', 16, 1)
             RETURN
         END
 
-        IF EXISTS (SELECT 1 FROM dbo.syUser WHERE userName = @pUserName AND isActive = 1)
+        IF EXISTS (SELECT 1 FROM dbo.syUser WHERE userName = @pUserName AND isActive = 1 AND isDeleted = 0)
         BEGIN
             RAISERROR('Username already exists.', 16, 1)
             RETURN
@@ -620,13 +621,13 @@ BEGIN
 
         EXEC sp_set_session_context @key = N'IdUser', @value = @pIdUserActing;
 
-        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1)
+        IF NOT EXISTS (SELECT 1 FROM dbo.hrEmployee WHERE idEmployee = @pIdEmployee AND isActive = 1 AND isDeleted = 0)
         BEGIN
             RAISERROR('Employee does not exist or is not active.', 16, 1)
             RETURN
         END
 
-        IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND idEmployee = @pIdEmployee)
+        IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND idEmployee = @pIdEmployee AND isDeleted = 0)
         BEGIN
             RAISERROR('User does not exist or is not associated with the specified employee.', 16, 1)
             RETURN
@@ -675,7 +676,7 @@ BEGIN
     SELECT TOP 1
         @pUserId = u.idUser
     FROM dbo.syUser u
-    WHERE u.userName = @pUserName AND u.passwordHash = @pPassword AND u.isActive = 1
+    WHERE u.userName = @pUserName AND u.passwordHash = @pPassword AND u.isActive = 1 AND u.isDeleted = 0
 
     IF @pUserId IS NOT NULL
     BEGIN
@@ -701,7 +702,7 @@ BEGIN
             r.name AS roleName
         FROM dbo.syUserRole ur
         JOIN dbo.syRole r ON ur.idRole = r.idRole
-        WHERE ur.idUser = @pUserId AND r.isActive = 1
+        WHERE ur.idUser = @pUserId AND r.isActive = 1 AND r.isDeleted = 0
     END
     ELSE
     BEGIN
@@ -721,7 +722,7 @@ CREATE PROCEDURE dbo.usp_sy_ChangePassword (
 BEGIN
     -- Verify identity before updating; session context set after so audit captures correct user
     
-    IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND u.passwordHash = @pOldPassword AND isActive = 1)
+    IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND passwordHash = @pOldPassword AND isActive = 1 AND isDeleted = 0)
     BEGIN
         RAISERROR('Invalid username or old password.', 16, 1)
         RETURN
@@ -747,7 +748,7 @@ CREATE PROCEDURE dbo.usp_sy_ResetPassword (
 ) AS
 BEGIN
 
-    IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND isActive = 1)
+    IF NOT EXISTS (SELECT 1 FROM dbo.syUser WHERE idUser = @pIdUser AND isActive = 1 AND isDeleted = 0)
     BEGIN
         RAISERROR('User not found or is not active.', 16, 1)
         RETURN

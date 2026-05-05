@@ -173,6 +173,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_Phone] PRIMARY KEY CLUSTERED ([idPhone] ASC)
@@ -220,6 +221,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([idEmployee] ASC)
@@ -253,6 +255,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_EmploymentContract] PRIMARY KEY CLUSTERED ([idEmploymentContract] ASC)
@@ -322,6 +325,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_Room] PRIMARY KEY CLUSTERED ([idRoom] ASC)
@@ -437,6 +441,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_DiscountVersion] PRIMARY KEY CLUSTERED ([idDiscountVersion] ASC)
@@ -481,6 +486,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_Expense] PRIMARY KEY CLUSTERED ([idExpense] ASC)
@@ -519,6 +525,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_PaymentReceipt] PRIMARY KEY CLUSTERED ([idPaymentReceipt] ASC)
@@ -557,6 +564,7 @@ BEGIN TRY
         [registrationUser]          [int]           NOT NULL DEFAULT 0,
         [modifiedDate]              [datetime]      NULL,
         [modifiedUser]              [int]           NULL,
+        [isDeleted]                 [bit]           NOT NULL DEFAULT 0,
         [deletedDate]               [datetime]      NULL,
         [deletedUser]               [int]           NULL,
         CONSTRAINT [PK_PaymentReceiptDetail] PRIMARY KEY CLUSTERED ([idPaymentReceiptDetail] ASC)
@@ -669,6 +677,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_Student] PRIMARY KEY CLUSTERED ([idStudent] ASC)
@@ -720,6 +729,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_Relative] PRIMARY KEY CLUSTERED ([idRelative], [idStudent] ASC)
@@ -775,6 +785,7 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
         [deletedDate]           [datetime]      NULL,
         [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_StudentDocument] PRIMARY KEY CLUSTERED ([idStudentDocument] ASC)
@@ -819,10 +830,12 @@ BEGIN TRY
         [name]              [nvarchar](200) NOT NULL,
         [description]       [nvarchar](200) NULL,
         [isPrivate]         [bit]           NOT NULL DEFAULT 0,
+        [isActive]          [bit]           NOT NULL DEFAULT 1,
         [registrationDate]  [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_ExternalSchool] PRIMARY KEY CLUSTERED ([idExternalSchool] ASC)
@@ -850,6 +863,9 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_AcademicBackground] PRIMARY KEY CLUSTERED ([idAcademicBackground] ASC)
     )
 
@@ -920,10 +936,14 @@ BEGIN TRY
         [year]              [int]           NOT NULL,
         [dueDay]            [smallint]      NOT NULL,
         [classStartDate]    [date]          NOT NULL,
+        [isActive]          [bit]           NOT NULL DEFAULT 1,
         [registrationDate]  [datetime]      NOT NULL DEFAULT GETDATE(),
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
+        [deletedDate]       [datetime]      NULL,
+        [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_SchoolYear] PRIMARY KEY CLUSTERED ([idSchoolYear] ASC)
     )
 
@@ -942,6 +962,9 @@ BEGIN TRY
         [registrationUser]              [int]       NOT NULL DEFAULT 0,
         [modifiedDate]                  [datetime]  NULL,
         [modifiedUser]                  [int]       NULL,
+        [isDeleted]                     [bit]       NOT NULL DEFAULT 0,
+        [deletedDate]                   [datetime]  NULL,
+        [deletedUser]                   [int]       NULL,
         CONSTRAINT [PK_SchoolYearLevel] PRIMARY KEY CLUSTERED ([idSchoolYearLevel] ASC)
     )
 
@@ -969,6 +992,9 @@ BEGIN TRY
         [registrationUser]          [int]           NOT NULL DEFAULT 0,
         [modifiedDate]              [datetime]      NULL,
         [modifiedUser]              [int]           NULL,
+        [isDeleted]                 [bit]           NOT NULL DEFAULT 0,
+        [deletedDate]               [datetime]      NULL,
+        [deletedUser]               [int]           NULL,
         CONSTRAINT [PK_SchoolYearFeeSchedule] PRIMARY KEY CLUSTERED ([idSchoolYearFeeSchedule] ASC)
     )
 
@@ -1000,6 +1026,9 @@ BEGIN TRY
         [registrationUser]      [int]           NOT NULL DEFAULT 0,
         [modifiedDate]          [datetime]      NULL,
         [modifiedUser]          [int]           NULL,
+        [isDeleted]             [bit]           NOT NULL DEFAULT 0,
+        [deletedDate]           [datetime]      NULL,
+        [deletedUser]           [int]           NULL,
         CONSTRAINT [PK_Enrollment] PRIMARY KEY CLUSTERED ([idEnrollment] ASC)
     )
 
@@ -1085,6 +1114,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_StudentNote] PRIMARY KEY CLUSTERED ([idStudentNote] ASC)
@@ -1107,6 +1137,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_PaymentNote] PRIMARY KEY CLUSTERED ([idPaymentNote] ASC)
@@ -1138,6 +1169,9 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
+        [deletedDate]       [datetime]      NULL,
+        [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED ([idRole] ASC)
     )
 
@@ -1196,6 +1230,7 @@ BEGIN TRY
         [registrationUser]  [int]           NOT NULL DEFAULT 0,
         [modifiedDate]      [datetime]      NULL,
         [modifiedUser]      [int]           NULL,
+        [isDeleted]         [bit]           NOT NULL DEFAULT 0,
         [deletedDate]       [datetime]      NULL,
         [deletedUser]       [int]           NULL,
         CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([idUser] ASC)

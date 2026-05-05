@@ -191,6 +191,7 @@ BEGIN
 		isActive
 	FROM dbo.inRoom
 	WHERE isActive = 1
+	AND   isDeleted = 0
 	AND   (ISNULL(@pIdCampus,0) = 0 OR idCampus = @pIdCampus)
 	ORDER BY name ASC
 END
@@ -415,6 +416,7 @@ BEGIN
 		isActive
 	FROM dbo.syRole
 	WHERE isActive = 1
+	AND   isDeleted = 0
 	ORDER BY name ASC
 END
 GO
